@@ -1,0 +1,28 @@
+# We want to commit existing model_state and charts for production use!
+# model_state/
+# charts/
+
+# API secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node & Next.js
+node_modules/
+.next/
+out/
+build/
+.vercel/
