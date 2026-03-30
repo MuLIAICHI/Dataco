@@ -83,10 +83,16 @@ export default function TaskAssignment() {
           <a href="https://ayautomate.com" target="_blank" className="underline" style={{ color: "var(--accent)" }}>AYAutomate</a>.
           Inspired by Chapter 2 of Géron&apos;s <em>Hands-On Machine Learning</em>.
         </p>
-        <a href="https://www.linkedin.com/in/liaichi-mustapha/" target="_blank" rel="noopener noreferrer"
-          className="btn-primary">
-          Connect on LinkedIn ↗
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+          <a href="/morocco_housing_ml_report.pdf" target="_blank" rel="noopener noreferrer"
+            className="btn-ghost" style={{ border: "1px solid var(--border)" }}>
+            Read full ML report 📄
+          </a>
+          <a href="https://www.linkedin.com/in/liaichi-mustapha/" target="_blank" rel="noopener noreferrer"
+            className="btn-primary">
+            Connect on LinkedIn ↗
+          </a>
+        </div>
       </div>
     );
   }

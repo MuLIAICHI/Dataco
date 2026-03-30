@@ -75,9 +75,17 @@ export default function LandingPage() {
           Start your internship →
         </button>
 
-        <p className="text-xs" style={{ color: "var(--muted)" }}>
-          No sign-up required · ~8 min walkthrough · Data from Mubawab.ma
-        </p>
+        <div className="flex flex-col items-center gap-3 text-xs" style={{ color: "var(--muted)" }}>
+          <p>No sign-up required · ~8 min walkthrough · Data from Mubawab.ma</p>
+          <a
+            href="/morocco_housing_ml_report.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-white transition-colors"
+          >
+            Read the full ML report
+          </a>
+        </div>
       </div>
     </main>
   );
