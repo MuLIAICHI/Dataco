@@ -66,7 +66,7 @@ async def chat_with_mentor(body: ChatMessage):
     messages.append({"role": "user", "content": user_content})
 
     response = client.messages.create(
-        model="claude-haiku-4-5-20251001",
+        model="claude-3-5-haiku-20241022",
         max_tokens=800,
         system=MENTOR_SYSTEM_PROMPT,
         messages=messages,
