@@ -19,14 +19,17 @@ app = FastAPI(
     version="1.0.0",
 )
 
+frontend_urls = [url.strip() for url in os.getenv("FRONTEND_URL", "").split(",") if url.strip()]
+
 # CORS — allow Next.js frontend (Vercel) and local dev
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://*.vercel.app",
-        os.getenv("FRONTEND_URL", "*"),
-    ],
+        "https://dataco.cc",
+        "https://www.dataco.cc",
+    ] + frontend_urls,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
