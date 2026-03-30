@@ -54,7 +54,7 @@ warnings.filterwarnings("ignore")
 # CONFIGURATION — edit these before first run
 # ─────────────────────────────────────────────
 
-APIFY_API_TOKEN   = "YOUR_APIFY_TOKEN_HERE"        # never commit this
+APIFY_API_TOKEN   = os.getenv("APIFY_API_TOKEN", "YOUR_APIFY_TOKEN_HERE")  # Read from env in CI/CD
 APIFY_DATASET_ID  = "mubawab-housing"               # named dataset or dataset ID
 APIFY_API_BASE    = "https://api.apify.com/v2"
 
@@ -549,7 +549,7 @@ def main():
     else:
         if APIFY_API_TOKEN == "YOUR_APIFY_TOKEN_HERE":
             raise ValueError(
-                "Set your APIFY_API_TOKEN in the script config section, "
+                "Set your APIFY_API_TOKEN in the script config section, or export it as an ENV variable "
                 "or pass --local-csv for local testing."
             )
         data_source   = fetch_from_apify
